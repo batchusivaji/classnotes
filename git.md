@@ -20,4 +20,5 @@
    where your code history is maintained
    ![preview](images/2%20Central-VCS.png)
  ### distribued version control sytem:
- 1. 
+ 1. we have one local repository which connect multiple remote repositories
+  ![preview](images/3%20Distributed%20Version%20Control%20Systems%20-%20Distributed-VCS.png)
