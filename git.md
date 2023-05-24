@@ -12,10 +12,12 @@
 ### local version control sysytem :
 1. it is a single machine multi user version conrol sytem
 2. it is not scalable
+   ![preview](images/1%20Local-VCS.png)
  ### centralized version control sysem: 
  1. client(which is a developer)
  2. server
  3. this is multi machine concept 
    where your code history is maintained
+   ![preview](images/2%20Central-VCS.png)
  ### distribued version control sytem:
  1. 
