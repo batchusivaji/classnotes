@@ -22,3 +22,16 @@
  ### distribued version control sytem:
  1. we have one local repository which connect multiple remote repositories
   ![preview](images/3%20Distributed%20Version%20Control%20Systems%20-%20Distributed-VCS.png)
+
+  # GIT
+  * git is a distributed vcs
+  * while using we have two options for remote repositories
+       * Self-Hosted: Host it on your own.
+             options: 1. gitolite
+                      2. git lab self hosted
+       *  Cloud-Hosted: hosted by some service provider.
+            options: 1. Github
+                     2. Bitbucket
+                     3. git lab
+                     4. azure source repos
+                     5. Aws code commit
