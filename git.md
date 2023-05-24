@@ -23,13 +23,13 @@
  1. we have one local repository which connect multiple remote repositories
   ![preview](images/decentralizes.webp)
 
-  # GIT
-      Git is a Distributed Version Control System
-      While using we have two options for Remote Repositories
-       * Self-Hosted: Host it on your own.
+  ## GIT
+  ### Git is a Distributed Version Control System
+  ### While using we have two options for Remote Repositories
+        Self-Hosted: Host it on your own.
             Options: 1. gitolite
                       2. git lab self hosted
-       * Cloud-Hosted: Hosted by some service provider.
+        Cloud-Hosted: Hosted by some service provider.
             Options: 1. Github
                      1. Bitbucket
                      2. git lab
