@@ -35,3 +35,10 @@
                      2. git lab
                      3. azure source repos
                      4. Aws code commit
+   
+ ## Git Workflow:-
+
+ ### What git commit is ?
+   ![preview](images/commit.webp)
+### Work done so far
+   ![preview](images/workflow.webp)
