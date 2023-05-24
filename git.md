@@ -18,20 +18,20 @@
  2. server
  3. this is multi machine concept 
    where your code history is maintained
-   ![preview](images/2%20Central-VCS.png)
+   ![preview](images/centralizes.webp)
  ### distribued version control sytem:
  1. we have one local repository which connect multiple remote repositories
-  ![preview](images/3%20Distributed%20Version%20Control%20Systems%20-%20Distributed-VCS.png)
+  ![preview](images/decentralizes.webp)
 
   # GIT
-  * git is a distributed vcs
-  * while using we have two options for remote repositories
+  * Git is a Distributed Version Control System
+  * While using we have two options for Remote Repositories
        * Self-Hosted: Host it on your own.
-             options: 1. gitolite
-                      2. git lab self hosted
-       *  Cloud-Hosted: hosted by some service provider.
-            options: 1. Github
-                     2. Bitbucket
-                     3. git lab
-                     4. azure source repos
-                     5. Aws code commit
+             Options: 1. gitolite
+                      1. git lab self hosted
+       *  Cloud-Hosted: Hosted by some service provider.
+            Options: 1. Github
+                     1. Bitbucket
+                     2. git lab
+                     3. azure source repos
+                     4. Aws code commit
