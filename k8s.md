@@ -11,7 +11,7 @@
 ###  k8s Can do both the above But Docker which cannot do it. might Docker Swarm Does it
 
 ## Auto Scalling:-
- ###  We are Running E-commerse application in Docker Container and There is Discount Season and Discount Sale what happend is lot of traffic is there. when there is lot of traffic your application cannot Run exactly same number.earlier you would try to run 10 conatiners you might need 20 or 30
+ #####  We are Running E-commerse application in Docker Container and There is Discount Season and Discount Sale what happend is lot of traffic is there. when there is lot of traffic your application cannot Run exactly same number.earlier you would try to run 10 conatiners you might need 20 or 30
 
 ### Containers Don't Scale on their Own
   ### Scalliing is of two types
