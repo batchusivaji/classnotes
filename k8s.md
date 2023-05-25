@@ -1,0 +1,96 @@
+# k8s
+## Need for k8s
+### High Availability:
+    when your application is running in Docker Containers for some reasons in your Applications is gone Down that means your Container is Exited State or Stoped State.So Your application will have a Downtime. Now check my application is gone into the Exited or stoped state Now i would go probably Docker Container Run or Start Command are execute and Make the Conatainer Work
+
+    The problem is When your working in Single System . If there is Some Software Which Recogniges that When Containers goes Down it will automatically Do the Work So Starting Containers back  So your application is always Up and Running. There is Some Application can Do that . It will help us 
+
+* When we Run our Application in Docker Containers and if Containers fails we need to Manually Start the Conatiner(Container Down)
+      
+* If the Node i.e The machine Fails all the Container Running on the same machine it Should be Re-Created on Other machine(Node Down)
+      k8s Can do both the above But Docker which cannot do it. might Docker Swarm Does it
+
+### Auto Scalling:-
+   We are Running E-commerse application in Docker Container and There is Discount Season and Discount Sale what happend is lot of traffic is there. when there is lot of traffic your application cannot Run exactly same number.earlier you would try to run 10 conatiners you might need 20 or 30
+
+* Containers Don't Scale on their Own
+* Scalliing is of two types
+    * Vertical Scalling 
+    * Horizontal Scalling
+  ### Vertical Scalling :
+      Increasing Size of the Conatiner
+Ex:1. Intially you would give 256 Mb but now you will give 512 Mb
+   2. intially you are giving 1 CPU and now you are giving 2 CPUs
+  ### Horizontal Scalling:
+      Increasing number of Containers
+Ex: 1. You application is runnning in One Container Now you going to Run 10 Containers
+
+    K8s can do both Vertical Scalling  and Horizontal Scalling of Conatiners
+
+### Zero-Downtime Deployment
+ Generally when we run on Application in Containers it is not guarenteed that it could be the same containers running forever it will always get new realeses and then we moving from older Version into Newer Version we would want to Zero-Downtime or Near Zero-Downtime Deployments
+  * k8s can handle Deployments with near Zero-Downtime Deployments
+  * k8s can handle rollout(newverion) and rollback(Undo new version => Older Version)
+  * k8s is Described as `Production grade container Management`
+  
+### History
+ 
+ * Google had a History of running everything  on Containers
+ * To manage these Containers,Google has developed Container Management tools(inhouse or internelly)
+       * Borg
+       * omega
+  * With Docker publicizing containers, With the experience in running and managing containers, Google has started a project Kubernetes (developed in Go) and then handed it over to Cloud Native Container Foundation (CNCF)
+  
+### Competetiors:
+* Apache Mesos
+* Hashicorp Nomad
+* Docker Swarm
+* But K8s is clear winner
+
+## Monolith:
+* This is a unit of deployment, where all the functionality of the system has to be deployed together
+* Single Process Monolith
+  
+  ![preview](images/mono-1.webp)
+* Modular Monolith: Subset of Single Process Monolith
+  ![preview](images/momo-2.webp)
+
+* Challanges:-
+
+* The whole application has to be deployed and the necessary changes in the database also should be up to the mark
+* When there is load on som part/module of your application and you need to scale the whole application
+
+## What are micro services
+* Microservices are independently deployable services modelled around business domain.
+* These microservices communicate with each other via networks
+
+![preview](images/micro.webp)
+
+* Each service can be developed in a differnt programming language as the communications between microservices are generally over http
+* Challenges:
+     * Microservices are distributed systems, so managing the application is more complex than a monolith
+     * For deploying the applications which are microservices and handling challenges, we would require an orchestration software and kubernetes is best player in this area.
+ * ![preview](images/eShop.webp)
+  
+  ### K8s is not designed only for Docker
+ * Initially k8s used docker as a main container platform and docker used to get special treatment, from k8s 1.24 special treatment is stopped.
+* k8s is designed to run any container technology, for this k8s expects container technology to follow k8s interfaces.
+
+# K8s Architecture
+ * Official Architecture image
+  ![preview](images/offi.webp)
+
+* Other easier representations
+* Master Node
+
+![preview](images/kubemaster.webp)
+* Node
+![preview](images/node.webp)
+
+* Clients
+    * kubectl
+    * any rest based client
+* Logical view
+  ![preview](images/logical.webp)
+* Actual view
+  ![preview](images/actual.webp)
