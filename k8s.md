@@ -5,19 +5,19 @@
 
   ######  The problem is When your working in Single System . If there is Some Software Which Recogniges that When Containers goes Down it will automatically Do the Work So Starting Containers back  So your application is always Up and Running. There is Some Application can Do that . It will help us 
 
-### When we Run our Application in Docker Containers and if Containers fails we need to Manually Start the Conatiner(Container Down)
+#### When we Run our Application in Docker Containers and if Containers fails we need to Manually Start the Conatiner(Container Down)
       
-### If the Node i.e The machine Fails all the Container Running on the same machine it Should be Re-Created on Other machine(Node Down)
-###  k8s Can do both the above But Docker which cannot do it. might Docker Swarm Does it
+#### If the Node i.e The machine Fails all the Container Running on the same machine it Should be Re-Created on Other machine(Node Down)
+####  k8s Can do both the above But Docker which cannot do it. might Docker Swarm Does it
 
 ## Auto Scalling:-
  #####  We are Running E-commerse application in Docker Container and There is Discount Season and Discount Sale what happend is lot of traffic is there. when there is lot of traffic your application cannot Run exactly same number.earlier you would try to run 10 conatiners you might need 20 or 30
 
-### Containers Don't Scale on their Own
-  ### Scalliing is of two types
+#### Containers Don't Scale on their Own
+  #### Scalliing is of two types
     * Vertical Scalling 
     * Horizontal Scalling
-  ### Vertical Scalling :
+  #### Vertical Scalling :
       Increasing Size of the Conatiner
 Ex:1. Intially you would give 256 Mb but now you will give 512 Mb
    1. intially you are giving 1 CPU and now you are giving 2 CPUs
