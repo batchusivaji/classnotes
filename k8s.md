@@ -168,8 +168,8 @@ This is component in k8s with cloud specific knowledge
      * From code/restapi with json
      * From command line where k8s gives a cmd line tools kubectl
 * In kubectl can be interacted in two ways
-             imperative commands
-             declarative (yaml)
+           imperative commands
+           declarative (yaml)
 * To k8s we always express the desired state (What is that we want)
 * These yaml files where we describe our desired state are called as 
    manifests.
