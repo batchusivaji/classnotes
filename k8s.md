@@ -3,7 +3,7 @@
 ### High Availability
 * when your application is running in Docker Containers for some reasons in your Applications is gone Down that means your Container is Exited State or Stoped State.So Your application will have a Downtime. Now check my application is gone into the Exited or stoped state Now i would go probably Docker Container Run or Start Command are execute and Make the Conatainer Work
 
-  *  The problem is When your working in Single System . If there is Some Software Which Recogniges that When Containers goes Down it will automatically Do the Work So Starting Containers back  So your application is always Up and Running. There is Some Application can Do that . It will help us 
+* The problem is When your working in Single System . If there is Some Software Which Recogniges that When Containers goes Down it will automatically Do the Work So Starting Containers back  So your application is always Up and Running. There is Some Application can Do that . It will help us 
 
 ` When we Run our Application in Docker Containers and if Containers fails we need to Manually Start the Conatiner(Container Down)`
       
@@ -180,3 +180,15 @@ k8s uses etc to store all the cluster data
   `it will checks for Container Count`
   ### What is k8s manifest
 This is a yaml file which describes the desired state of what you want in/using k8s cluster
+
+### K8s Objects
+* `Everything in k8s is an Object`
+* `Every Object has Spec and Status`
+* Spec: Specification(What we have asked)
+* Status: What was Created
+  ### Pod
+* The smallest unit of creation is Pod
+* Pod has a Container(s)
+* Every Pod gets an API adress 
+### K8s Workload
+![preview](images/workloads.webp)
