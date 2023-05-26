@@ -75,6 +75,29 @@ Ex: 1. You application is runnning in One Container Now you are going to Run 10 
   ### K8s is not designed only for Docker
  * Initially k8s used docker as a main container platform and docker used to get special treatment, from k8s 1.24 special treatment is stopped.
 * k8s is designed to run any container technology, for this k8s expects container technology to follow k8s interfaces.
+  ### One of major properties of k8s is Self healing
+  ### K8s is distributed application which is called as k8s cluster
+  ![preview](images/k8s1.webp)
+### K8s takes care of
+* Scaling requirements
+* Failover
+* Deployment Options
+* K8S provides
+* Service Discovery & Load Balancing
+* Storage Orchestration
+* Automated rollouts and rollbacks
+* Self-Healing
+* Secret and Configuration Management
+* K8s is a platform that manages container based applications, their network and storage components
+* K8s Can be installed in many ways
+    * Self Hosted => where we install k8s
+           minikube
+           Kubeadm
+           Kube Spray
+* Cloud Hosted Services => Kubernetes as a Service
+AWS => Elastic Kubernetes Service (EKS)
+Azure => Azure Kubernetes Service (AKS)
+Google => Google Kubernetes Engine (GKE)
 
 # K8s Architecture
  * Official Architecture image
@@ -94,3 +117,37 @@ Ex: 1. You application is runnning in One Container Now you are going to Run 10 
   ![preview](images/logical.webp)
 ### Actual view
   ![preview](images/actual.webp)
+
+
+#### K8s Components
+
+* Node: what is required to Run your Container
+*  Client is nothing but What is necessary for you to tell the work to the Cluster
+   ### Control plane components (Master Node Components)
+
+* kube-api server
+* etcd (*)
+* kube-scheduler
+* controller manager
+* cloud controller manager
+  
+  #### kube-api server
+* Handles all the communication of k8s cluster(control plane and nodes)
+* Let it be internal or external
+* The API server is  exposes fuctionality over Http(s) protocol and `k8s API`
+  
+#### ectd
+1.This is memory of k8s cluster
+           or
+k8s uses etc to store all the cluster data
+2. This is distribute key-value store
+#### scheduler
+Scheduler is responsible for creating k8s objects(pods) and scheduling them on right node
+#### Controller
+1. This ensures desired state is maintained
+2. This reconcilation loop that checks for desired state and if it mis matches doing the necessary steps is done by controller
+#### Cloud Controller
+This is component in k8s with cloud specific knowledge
+### Nodes have the following component
+![preview](images/cluster.webp)
+
