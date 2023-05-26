@@ -1,45 +1,45 @@
 # k8s
 ## Need for k8s
 ### High Availability:
-   ###### when your application is running in Docker Containers for some reasons in your Applications is gone Down that means your Container is Exited State or Stoped State.So Your application will have a Downtime. Now check my application is gone into the Exited or stoped state Now i would go probably Docker Container Run or Start Command are execute and Make the Conatainer Work
+    when your application is running in Docker Containers for some reasons in your Applications is gone Down that means your Container is Exited State or Stoped State.So Your application will have a Downtime. Now check my application is gone into the Exited or stoped state Now i would go probably Docker Container Run or Start Command are execute and Make the Conatainer Work
 
-  ######  The problem is When your working in Single System . If there is Some Software Which Recogniges that When Containers goes Down it will automatically Do the Work So Starting Containers back  So your application is always Up and Running. There is Some Application can Do that . It will help us 
+    The problem is When your working in Single System . If there is Some Software Which Recogniges that When Containers goes Down it will automatically Do the Work So Starting Containers back  So your application is always Up and Running. There is Some Application can Do that . It will help us 
 
-#### When we Run our Application in Docker Containers and if Containers fails we need to Manually Start the Conatiner(Container Down)
+` When we Run our Application in Docker Containers and if Containers fails we need to Manually Start the Conatiner(Container Down)`
       
-#### If the Node i.e The machine Fails all the Container Running on the same machine it Should be Re-Created on Other machine(Node Down)
+ `If the Node i.e The machine Fails all the Container Running on the same machine it Should be Re-Created on Other machine(Node Down)`
 ####  k8s Can do both the above But Docker which cannot do it. might Docker Swarm Does it
 
 ## Auto Scalling:-
- #####  We are Running E-commerse application in Docker Container and There is Discount Season and Discount Sale what happend is lot of traffic is there. when there is lot of traffic your application cannot Run exactly same number.earlier you would try to run 10 conatiners you might need 20 or 30
+   We are Running E-commerse application in Docker Container and There is Discount Season and Discount Sale what happend is lot of traffic is there. when there is lot of traffic your application cannot Run exactly same number.earlier you would try to run 10 conatiners you might need 20 or 30
 
 #### Containers Don't Scale on their Own
-  #### Scalliing is of two types
-    * Vertical Scalling 
-    * Horizontal Scalling
-  #### Vertical Scalling :
-      Increasing Size of the Conatiner
+   Scalliing is of two types
+    ` Vertical Scalling` 
+    ` Horizontal Scalling`
+   Vertical Scalling :
+      `Increasing Size of the Conatiner`
 Ex:1. Intially you would give 256 Mb but now you will give 512 Mb
    1. intially you are giving 1 CPU and now you are giving 2 CPUs
-  ### Horizontal Scalling:
-      Increasing number of Containers
+   Horizontal Scalling:
+      `Increasing number of Containers`
 Ex: 1. You application is runnning in One Container Now you are going to Run 10 Containers
 
     K8s can do both Vertical Scalling  and Horizontal Scalling of Conatiners
 
 ### Zero-Downtime Deployment
-#### Generally when we run on Application in Containers it is not guarenteed that it could be the same containers running forever it will always get new realeses and then we moving from older Version into Newer Version we would want to Zero-Downtime or Near Zero-Downtime Deployments
-  ### k8s can handle Deployments with near Zero-Downtime Deployments
-  ### k8s can handle rollout(newverion) and rollback(Undo new version => Older Version)
+ Generally when we run on Application in Containers it is not guarenteed that it could be the same containers running forever it will always get new realeses and then we moving from older Version into Newer Version we would want to Zero-Downtime or Near Zero-Downtime Deployments
+  ` k8s can handle Deployments with near Zero-Downtime Deployments`
+  ` k8s can handle rollout(newverion) and rollback(Undo new version => Older Version)`
   ### k8s is Described as `Production grade container Management`
   
 ### History
  
- ### Google had a History of running everything  on Containers
- ### To manage these Containers,Google has developed Container Management tools(inhouse or internelly)
-       * Borg
-       * omega
-  ### With Docker publicizing containers, With the experience in running and managing containers, Google has started a project Kubernetes (developed in Go) and then handed it over to Cloud Native Container Foundation (CNCF)
+ Google had a History of running everything  on Containers
+ To manage these Containers,Google has developed Container Management tools(inhouse or internelly)
+        `Borg`
+        `omega`
+ With Docker publicizing containers, With the experience in running and managing containers, Google has started a project Kubernetes (developed in Go) and then handed it over to `Cloud Native Container Foundation (CNCF)`
   
 ### Competetiors:
 * Apache Mesos
@@ -75,8 +75,8 @@ Ex: 1. You application is runnning in One Container Now you are going to Run 10 
   ### K8s is not designed only for Docker
  * Initially k8s used docker as a main container platform and docker used to get special treatment, from k8s 1.24 special treatment is stopped.
 * k8s is designed to run any container technology, for this k8s expects container technology to follow k8s interfaces.
-  ### One of major properties of k8s is Self healing
-  ### K8s is distributed application which is called as k8s cluster
+  ` One of major properties of k8s is Self healing`
+  ` K8s is distributed application which is called as k8s cluster`
   ![preview](images/k8s1.webp)
 ### K8s takes care of
 * Scaling requirements
@@ -132,46 +132,51 @@ Google => Google Kubernetes Engine (GKE)
 * cloud controller manager
   
   #### kube-api server
-* Handles all the communication of k8s cluster(control plane and nodes)
+* `Handles all the communication of k8s cluster`(control plane and nodes)
 * Let it be internal or external
 * The API server is  exposes fuctionality over Http(s) protocol and `k8s API`
   
 #### ectd
-1.This is memory of k8s cluster
+1.`This is memory of k8s cluster`
            or
 k8s uses etc to store all the cluster data
 2. This is distribute key-value store
 #### scheduler
-Scheduler is responsible for creating k8s objects(pods) and scheduling them on right node
-#### Controller
-1. This ensures desired state is maintained
-2. This reconcilation loop that checks for desired state and if it mis matches doing the necessary steps is done by controller
+`Scheduler is responsible for creating k8s objects(pods) and scheduling them on right node`
+#### Controller Manager
+1. `This ensures desired state is maintained`
+2. This `reconcilation loop` that checks for desired state and if it mis matches doing the necessary steps is done by controller
 #### Cloud Controller
-This is component in k8s with cloud specific knowledge
+`This is component in k8s with cloud specific knowledge`
 ### Nodes have the following component
 ![preview](images/cluster.webp)
  
 #### kubelet
-* This is an agent of the control plane
+* `This is an agent of the control plane`
 * Kubelet recieves requests/orders to create new Pods
 #### Container Runtime
-* This is technology in which your container is created 
+* `This is technology in which your container is created `
                       or
 * Container technology to be used in k8s cluster
 * in our case it is docker.
 #### Kube-Proxy
-* This maintains network rules on the nodes
+* `This maintains network rules on the nodes`
 * This is a network proxy that runs on each node in k8s
 #### kubectl
+* `kubectl communicate with the Cluster to create resourses`
 * K8s is designed to work with any container technology.
-* K8s is cluster so we interact with master nodes. There are two ways of interacting, where as for k8s it exposes APIs.
+* ` K8s is cluster so we interact with master nodes`. There are two ways of interacting, where as for k8s it exposes APIs.
      * From code/restapi with json
      * From command line where k8s gives a cmd line tools kubectl
 * In kubectl can be interacted in two ways
-           imperative commands
-           declarative (yaml)
-* To k8s we always express the desired state (What is that we want)
-* These yaml files where we describe our desired state are called as 
-   manifests.
+           `imperative (commands)`
+           `declarative (yaml)`
+* To `k8s we always express the desired state` (What is that we want)
+*  `These yaml files where we describe our desired state are called as 
+   manifests`
+  ### Node contoller 
+  `it will checks for node failures`
+  ### Replication controller
+  `it will checks for Container Count`
   ### What is k8s manifest
 This is a yaml file which describes the desired state of what you want in/using k8s cluster
