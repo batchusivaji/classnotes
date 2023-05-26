@@ -150,4 +150,28 @@ Scheduler is responsible for creating k8s objects(pods) and scheduling them on r
 This is component in k8s with cloud specific knowledge
 ### Nodes have the following component
 ![preview](images/cluster.webp)
-
+ 
+#### kubelet
+* This is an agent of the control plane
+* Kubelet recieves requests/orders to create new Pods
+#### Container Runtime
+* This is technology in which your container is created 
+                      or
+* Container technology to be used in k8s cluster
+* in our case it is docker.
+#### Kube-Proxy
+* This maintains network rules on the nodes
+* This is a network proxy that runs on each node in k8s
+#### kubectl
+* K8s is designed to work with any container technology.
+* K8s is cluster so we interact with master nodes. There are two ways of interacting, where as for k8s it exposes APIs.
+     * From code/restapi with json
+     * From command line where k8s gives a cmd line tools kubectl
+* In kubectl can be interacted in two ways
+             imperative commands
+             declarative (yaml)
+* To k8s we always express the desired state (What is that we want)
+* These yaml files where we describe our desired state are called as 
+   manifests.
+  ### What is k8s manifest
+This is a yaml file which describes the desired state of what you want in/using k8s cluster
