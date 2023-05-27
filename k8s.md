@@ -192,3 +192,9 @@ This is a yaml file which describes the desired state of what you want in/using 
 * Every Pod gets an API adress 
 ### K8s Workload
 ![preview](images/workloads.webp)
+
+### API Versioning
+APIs are grouped as apigroups:
+* core
+* batch
+* networking.k8s.io
