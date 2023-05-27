@@ -15,15 +15,15 @@
 
 #### Containers Don't Scale on their Own
    Scalliing is of two types
-    ` Vertical Scalling` 
-    ` Horizontal Scalling`
-   Vertical Scalling :
+   * ` Vertical Scalling` 
+   * ` Horizontal Scalling`
+   * Vertical Scalling :
       `Increasing Size of the Conatiner`
-Ex:1. Intially you would give 256 Mb but now you will give 512 Mb
-   1. intially you are giving 1 CPU and now you are giving 2 CPUs
-   Horizontal Scalling:
+   1. ntially you would give 256 Mb but now you will give 512 Mb
+   2. intially you are giving 1 CPU and now you are giving 2 CPUs
+   * Horizontal Scalling:
       `Increasing number of Containers`
-Ex: 1. You application is runnning in One Container Now you are going to Run 10 Containers
+1. You application is runnning in One Container Now you are going to Run 10 Containers
 
     K8s can do both Vertical Scalling  and Horizontal Scalling of Conatiners
 
@@ -78,7 +78,7 @@ Ex: 1. You application is runnning in One Container Now you are going to Run 10 
   ` One of major properties of k8s is Self healing`
   ` K8s is distributed application which is called as k8s cluster`
   ![preview](images/k8s1.webp)
-### K8s takes care of
+### K8s take care of
 * Scaling requirements
 * Failover
 * Deployment Options
@@ -88,7 +88,8 @@ Ex: 1. You application is runnning in One Container Now you are going to Run 10 
 * Automated rollouts and rollbacks
 * Self-Healing
 * Secret and Configuration Management
-* K8s is a platform that manages container based applications, their network and storage components
+* K8s is a platform that manages container based applications, their network 
+  and storage components
 * K8s Can be installed in many ways
     * Self Hosted => where we install k8s
            minikube
@@ -186,7 +187,7 @@ This is a yaml file which describes the desired state of what you want in/using 
 * `Every Object has Spec and Status`
 * Spec: Specification(What we have asked)
 * Status: What was Created
-  ### Pod
+### Pod
 * The smallest unit of creation is Pod
 * Pod has a Container(s)
 * Every Pod gets an API adress 
