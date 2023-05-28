@@ -194,7 +194,7 @@ This is a yaml file which describes the desired state of what you want in/using 
 * Pod has a Container(s)
 * Every Pod gets an API adress 
 ### pod lifecycle
-![preview](images\Pod-Lifecycle.PNG)
+![preview](images/lifecycle-4.jpg)
 ![preview](images/lifecycle-2.jpg)
 * Pending
 * Running
