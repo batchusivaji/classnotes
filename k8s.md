@@ -124,6 +124,7 @@ Google => Google Kubernetes Engine (GKE)
 
 * Node: what is required to Run your Container
 *  Client is nothing but What is necessary for you to tell the work to the Cluster
+*  Pod: the smallest unit of  creation inside k8s is pod
    ### Control plane components (Master Node Components)
 
 * kube-api server
@@ -188,9 +189,22 @@ This is a yaml file which describes the desired state of what you want in/using 
 * Spec: Specification(What we have asked)
 * Status: What was Created
 ### Pod
+![preview](images/lifecycle-3.jpg)
 * The smallest unit of creation is Pod
 * Pod has a Container(s)
 * Every Pod gets an API adress 
+### pod lifecycle
+![preview](images\Pod-Lifecycle.PNG)
+![preview](images/lifecycle-2.jpg)
+* Pending
+* Running
+* Succeded
+* Failed
+* Unknown
+### Container States in k8s pod
+* Waiting
+* Running
+* Terminated
 ### K8s Workload
 ![preview](images/workloads.webp)
 
@@ -199,3 +213,26 @@ APIs are grouped as apigroups:
 * core
 * batch
 * networking.k8s.io
+#### Controllers in K8s
+  ![preview](images/k8s39.webp)
+* Controllers in k8s control/maintain state of k8s objects
+* Controllers are k8s objects which run other k8s resources. This k8s resource will be part of specification generally in template section.
+* Controllers maintain desired state.
+* Some of the controllers are
+      * Replication Controller/Replica Set
+      * Stateful Sets
+      * Deployments
+      * Jobs
+      * Cron Jobs
+      * Daemonset      
+### K8s Jobs
+K8s has two types of jobs
+* Job: Run an activity/script to completion
+* CronJob: Run an activity/script to completion at specific time period or intervals.
+
+* Backofflimit: if job fails the pod it will be Restarted
+* ActiveDeadlineSecond: if Script is not finishing it will Stop
+* Running job waiting for Completion
+* When you delete the Controller Chaild Objects also deleted
+* Controller Controll the Job and Job Controll the Pod
+* `ImagepullBackoff`:The status ImagePullBackOff means that a Pod couldn’t start, because Kubernetes couldn’t pull a container image. The ‘BackOff’ part means that Kubernetes will keep trying to pull the image, with an increasing delay (‘back-off’).
