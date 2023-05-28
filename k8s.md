@@ -5,7 +5,7 @@
 
 * The problem is When your working in Single System . If there is Some Software Which Recogniges that When Containers goes Down it will automatically Do the Work So Starting Containers back  So your application is always Up and Running. There is Some Application can Do that . It will help us 
 
-` When we Run our Application in Docker Containers and if Containers fails we need to Manually Start the Conatiner(Container Down)`
+`When we Run our Application in Docker Containers and if Containers fails we need to Manually Start the Conatiner(Container Down)`
       
  `If the Node i.e The machine Fails all the Container Running on the same machine it Should be Re-Created on Other machine(Node Down)`
 ####  k8s Can do both the above But Docker which cannot do it. might Docker Swarm Does it
