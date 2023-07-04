@@ -1,5 +1,7 @@
 # k8s
 ## Need for k8s
+### Disaster Recovery :
+ backup and restore.
 ### High Availability
 * when your application is running in Docker Containers for some reasons in your Applications is gone Down that means your Container is Exited State or Stoped State.So Your application will have a Downtime. Now check my application is gone into the Exited or stoped state Now i would go probably Docker Container Run or Start Command are execute and Make the Conatainer Work
 
@@ -8,10 +10,17 @@
 `When we Run our Application in Docker Containers and if Containers fails we need to Manually Start the Conatiner(Container Down)`
       
  `If the Node i.e The machine Fails all the Container Running on the same machine it Should be Re-Created on Other machine(Node Down)`
+
+                            **or**  
+The user should not have any downtime.
+
+
 ####  k8s Can do both the above But Docker which cannot do it. might Docker Swarm Does it
 
 ## Auto Scalling:-
    We are Running E-commerse application in Docker Container and There is Discount Season and Discount Sale what happend is lot of traffic is there. when there is lot of traffic your application cannot Run exactly same number.earlier you would try to run 10 conatiners you might need 20 or 30
+                                **or**
+  the application normally have very high response time.
 
 #### Containers Don't Scale on their Own
    Scalliing is of two types
@@ -39,8 +48,8 @@
  To manage these Containers,Google has developed Container Management tools(inhouse or internelly)
  * `Borg`
  * `omega`
-* With Docker publicizing containers, With the experience in running and managing containers, Google has started a project Kubernetes (developed in Go) and then handed it over to `Cloud Native Container Foundation (CNCF)`
-  
+*** With Docker publicizing containers, With the experience in running and managing containers, Google has started a project Kubernetes (developed in Go) and then handed it over to `Cloud Native Container Foundation (CNCF)`
+**  
 ### Competetiors:
 * Apache Mesos
 * Hashicorp Nomad
