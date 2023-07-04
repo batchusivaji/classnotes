@@ -1,5 +1,10 @@
 # k8s
 ## Need for k8s
+### What is Kubernetes?
+In simple terms, Kubernetes is a container orchestration tool. It helps in maintaining the containers.
+
+When we build a containerized application and if there are large number of such containers, we need tool such as Kubernetes that help us to manage those containers and automate our workflow.
+
 ### Disaster Recovery :
  backup and restore.
 ### High Availability
