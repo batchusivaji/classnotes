@@ -28,12 +28,12 @@ The user should not have any downtime.
   the application normally have very high response time.
 
 #### Containers Don't Scale on their Own
-   Scalliing is of two types
+   Scalliing is two types
    * ` Vertical Scalling` 
    * ` Horizontal Scalling`
    * Vertical Scalling :
       `Increasing Size of the Conatiner`
-   1. ntially you would give 256 Mb but now you will give 512 Mb
+   1. intially you would give 256 Mb but storage not enough so now you will give 512 Mb
    2. intially you are giving 1 CPU and now you are giving 2 CPUs
    * Horizontal Scalling:
       `Increasing number of Containers`
