@@ -263,6 +263,27 @@ These are all type of controllers.
 - Jobs
 - Services
 
+
+# Kubernetes basic terminologies
+### Pods: 
+Pods are the smallest and the most basic unit in Kubernetes. Each pod get their own IP address so that they can communicate. A pod may be running a service like any application usually within a container.
+### Service: 
+Service is logical set of pods and each pod will have their own service. Lifecycle of Pod and service are not interconnected. Service are generally categorized into:
+Internal
+External
+### Node : 
+A node is a single host in K8s. This is used to run virtual or physical machine. There may be multiple/single pods within a node.
+### ReplicaSet:
+It is used to identify the particular number of pod replicas running inside a node.
+### ConfigMap :
+It contains all the external configuration of our application like database URL. The reason we need this is because this acts as a central repo to other components so if we have to make any changes like change in DB_URL we can simply change here and all changees will be reflected back.
+⚠ DO NOT STORE CREDENTIALS ON CONFIGMAP.
+### Secret:
+As name suggests it stores all the secret info like DB_USERNAME and DB_PASSWORD. We should always store such info in encrypted format rather than plain text.
+### Volumes: 
+This attaches a physical storage to the pod. Data mey be lost while resetting since it is not persistent.
+⚠ K8s does not manage data persistence.
+
 ## ReplicaSets
 Ensures that the specified number of replica for a pod are running at all times.
 
@@ -271,6 +292,9 @@ A deployment controller provides declarative updates for pods and ReplicaSets.
 
 - This means you can describe the desired state of a deployment in a YAML file, and the deployment controller will align the actual state to match. 
 - Manages a ReplicaSet.
+
+                               or
+ We do not directly create a pod in K8s. We create blueprint of the pod and the rest is handled by K8s. The blueprint for creating pod is called deployment.
 
 - pod management: running a ReplicaSet allows you to deploy a number of pods, and check their status as a single unit.
 
