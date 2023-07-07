@@ -42,7 +42,7 @@ The user should not have any downtime.
     K8s can do both Vertical Scalling  and Horizontal Scalling of Conatiners
 
 ### Zero-Downtime Deployment
- Generally when we run on Application in Containers it is not guarenteed that it could be the same containers running forever it will always get new realeses and then we moving from older Version into Newer Version we would want to Zero-Downtime or Near Zero-Downtime Deployments
+ Generally when we run on Application in  it is not guarenteed that it could be the same containers running forever it will always get new realeses and then we moving from older Version into Newer Version we would want to Zero-Downtime or Near Zero-Downtime Deployments
   * ` k8s can handle Deployments with near Zero-Downtime Deployments`
   * ` k8s can handle rollout(newverion) and rollback(Undo new version => Older Version)`
   #### k8s is Described as `Production grade container Management`
