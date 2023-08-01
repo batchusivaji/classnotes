@@ -176,7 +176,7 @@ k8s uses etc to store all the cluster data
 * Container technology to be used in k8s cluster
 * in our case it is docker.
 #### Kube-Proxy
-* `This maintains network rules on the nodes`
+* `it wil maintains network rules on the nodes`
 * This is a network proxy that runs on each node in k8s
 #### kubectl
 * `kubectl communicate with the Cluster to create resourses`
@@ -196,7 +196,12 @@ k8s uses etc to store all the cluster data
   `it will checks for Container Count`
   ### What is k8s manifest
 This is a yaml file which describes the desired state of what you want in/using k8s cluster
-
+### Reliable:
+the system as a whole must not fail if a part of it fails
+### Available: 
+should be working even during maintenance, rollouts
+### Scalable: 
+keep up with the increasing load without requiring radical redesign
 ### K8s Objects
 * `Everything in k8s is an Object`
 * `Every Object has Spec and Status`
